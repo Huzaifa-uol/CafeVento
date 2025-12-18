@@ -1,0 +1,14 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "devCommand": "npm run dev",
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "routes": [
+    {
+      "src": "/[^.]+(?:\\.(?!js$|css$|gif$|jpg$|jpeg$|png$|svg$|webp$|ico$)[^.]+)?$",
+      "destination": "/index.html"
+    }
+  ]
+}
