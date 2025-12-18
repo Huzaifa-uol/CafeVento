@@ -8,7 +8,7 @@
   "routes": [
     {
       "src": "/[^.]+(?:\\.(?!js$|css$|gif$|jpg$|jpeg$|png$|svg$|webp$|ico$)[^.]+)?$",
-      "destination": "/index.html"
+      "dest": "/index.html"
     }
   ]
 }
