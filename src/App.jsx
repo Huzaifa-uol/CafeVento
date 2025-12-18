@@ -5,6 +5,10 @@ import Home from "./components/pages/home";
 import Menu from "./components/pages/menu";
 import About from "./components/pages/about";
 import Contact from "./components/pages/contact";
+import ItemList from "./components/pages/ItemList";
+import CreateItem from "./components/pages/CreateItem";
+import ViewItem from "./components/pages/ViewItem";
+import EditItem from "./components/pages/EditItem";
 
 function App() {
   return (
@@ -14,7 +18,10 @@ function App() {
 
         <main className="flex-fill">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<ItemList />} />
+            <Route path="/create" element={<CreateItem />} />
+            <Route path="/item/:id" element={<ViewItem />} />
+            <Route path="/edit/:id" element={<EditItem />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
