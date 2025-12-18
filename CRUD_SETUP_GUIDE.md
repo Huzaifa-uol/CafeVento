@@ -3,6 +3,7 @@
 ## Project Overview
 
 This project implements a complete CRUD (Create, Read, Update, Delete) application using:
+
 - **React Router DOM** for SPA routing and navigation
 - **Firebase Firestore** for real-time database operations
 - **Bootstrap** for responsive UI
@@ -11,6 +12,7 @@ This project implements a complete CRUD (Create, Read, Update, Delete) applicati
 ## Features Implemented
 
 ### ✅ Task 1: SPA Routing with React Router DOM
+
 - Configured React Router DOM for seamless SPA navigation
 - Multiple routes with no page reloads:
   - `/` - ItemList (View All Items)
@@ -23,30 +25,35 @@ This project implements a complete CRUD (Create, Read, Update, Delete) applicati
 ### ✅ Task 2: CRUD Application with Firebase Firestore
 
 #### a. **Create (CreateItem Component)**
+
 - Form to collect item data (name, description, category, price)
 - Validation for required fields
 - Data stored in Firebase Firestore collection `items`
 - Redirect to view item after successful creation
 
 #### b. **Read All Items (ItemList Component)**
+
 - Fetches all documents from Firestore `items` collection
 - Displays items in a responsive card layout
 - Shows item name, description, category, and price
 - Sorted by creation date (newest first)
 
 #### c. **Read Single Item (ViewItem Component)**
+
 - Uses React Router dynamic routing: `/item/:id`
 - Fetches specific Firestore document by ID
 - Displays full item details
 - Shows creation and update timestamps
 
 #### d. **Update (EditItem Component)**
+
 - Uses React Router dynamic routing: `/edit/:id`
 - Pre-fills form with existing item data
 - Updates Firestore document on submission
 - Navigates to view item after update
 
 #### e. **Delete (ItemList Component)**
+
 - Delete button on each item card
 - Confirmation dialog before deletion
 - UI updates immediately after deletion
@@ -65,11 +72,12 @@ const firebaseConfig = {
   projectId: "your-project-id",
   storageBucket: "your-project.appspot.com",
   messagingSenderId: "123456789",
-  appId: "1:123456789:web:abc123def456"
+  appId: "1:123456789:web:abc123def456",
 };
 ```
 
 **To get these credentials:**
+
 1. Go to [Firebase Console](https://console.firebase.google.com)
 2. Create a new project or select existing one
 3. Go to Project Settings
@@ -145,46 +153,56 @@ src/
 Located in `src/services/firestoreService.js`:
 
 ### Create Item
+
 ```javascript
 createItem(itemData) → Promise<string>
 ```
+
 Creates a new item in Firestore and returns the document ID.
 
 ### Get All Items
+
 ```javascript
 getAllItems() → Promise<Array>
 ```
+
 Fetches all items sorted by creation date (newest first).
 
 ### Get Single Item
+
 ```javascript
 getItemById(id) → Promise<Object>
 ```
+
 Fetches a specific item by its ID.
 
 ### Update Item
+
 ```javascript
 updateItem(id, itemData) → Promise<void>
 ```
+
 Updates an existing item's data.
 
 ### Delete Item
+
 ```javascript
 deleteItem(id) → Promise<void>
 ```
+
 Deletes an item from Firestore.
 
 ## Routing Routes
 
-| Route | Component | Purpose |
-|-------|-----------|---------|
-| `/` | ItemList | View all items |
-| `/create` | CreateItem | Create new item form |
-| `/item/:id` | ViewItem | View single item details |
-| `/edit/:id` | EditItem | Edit item form |
-| `/menu` | Menu | (Existing) |
-| `/about` | About | (Existing) |
-| `/contact` | Contact | (Existing) |
+| Route       | Component  | Purpose                  |
+| ----------- | ---------- | ------------------------ |
+| `/`         | ItemList   | View all items           |
+| `/create`   | CreateItem | Create new item form     |
+| `/item/:id` | ViewItem   | View single item details |
+| `/edit/:id` | EditItem   | Edit item form           |
+| `/menu`     | Menu       | (Existing)               |
+| `/about`    | About      | (Existing)               |
+| `/contact`  | Contact    | (Existing)               |
 
 ## Item Data Structure
 
@@ -224,6 +242,7 @@ service cloud.firestore {
 ## Error Handling
 
 All components include:
+
 - Try-catch error handling
 - User-friendly error messages
 - Loading states
@@ -248,6 +267,7 @@ All components include:
 ---
 
 **Need Help?**
+
 - Firebase Docs: https://firebase.google.com/docs
 - React Router Docs: https://reactrouter.com/
 - Firebase Firestore Docs: https://firebase.google.com/docs/firestore

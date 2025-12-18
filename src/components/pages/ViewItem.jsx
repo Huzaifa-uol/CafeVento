@@ -40,7 +40,11 @@ export default function ViewItem() {
   };
 
   if (loading) {
-    return <div className="container mt-5"><p>Loading item...</p></div>;
+    return (
+      <div className="container mt-5">
+        <p>Loading item...</p>
+      </div>
+    );
   }
 
   if (error) {
@@ -85,25 +89,21 @@ export default function ViewItem() {
 
               <div className="mb-4">
                 <small className="text-muted">
-                  Created: {item.createdAt?.toDate?.().toLocaleString() || "N/A"}
+                  Created:{" "}
+                  {item.createdAt?.toDate?.().toLocaleString() || "N/A"}
                 </small>
                 <br />
                 <small className="text-muted">
-                  Last Updated: {item.updatedAt?.toDate?.().toLocaleString() || "N/A"}
+                  Last Updated:{" "}
+                  {item.updatedAt?.toDate?.().toLocaleString() || "N/A"}
                 </small>
               </div>
 
               <div className="d-flex gap-2">
-                <Link
-                  to={`/edit/${item.id}`}
-                  className="btn btn-warning"
-                >
+                <Link to={`/edit/${item.id}`} className="btn btn-warning">
                   Edit Item
                 </Link>
-                <button
-                  onClick={handleDelete}
-                  className="btn btn-danger"
-                >
+                <button onClick={handleDelete} className="btn btn-danger">
                   Delete Item
                 </button>
               </div>

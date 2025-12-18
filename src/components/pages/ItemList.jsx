@@ -30,7 +30,7 @@ export default function ItemList() {
     if (window.confirm("Are you sure you want to delete this item?")) {
       try {
         await deleteItem(id);
-        setItems(items.filter(item => item.id !== id));
+        setItems(items.filter((item) => item.id !== id));
       } catch (err) {
         setError("Failed to delete item");
         console.error(err);
@@ -39,7 +39,11 @@ export default function ItemList() {
   };
 
   if (loading) {
-    return <div className="container mt-5"><p>Loading items...</p></div>;
+    return (
+      <div className="container mt-5">
+        <p>Loading items...</p>
+      </div>
+    );
   }
 
   return (

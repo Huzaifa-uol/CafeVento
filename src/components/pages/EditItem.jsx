@@ -9,7 +9,7 @@ export default function EditItem() {
     name: "",
     description: "",
     category: "",
-    price: ""
+    price: "",
   });
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
@@ -27,7 +27,7 @@ export default function EditItem() {
         name: data.name || "",
         description: data.description || "",
         category: data.category || "",
-        price: data.price || ""
+        price: data.price || "",
       });
       setError(null);
     } catch (err) {
@@ -40,9 +40,9 @@ export default function EditItem() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -62,7 +62,7 @@ export default function EditItem() {
         name: formData.name,
         description: formData.description,
         category: formData.category,
-        price: formData.price ? parseFloat(formData.price) : null
+        price: formData.price ? parseFloat(formData.price) : null,
       };
 
       await updateItem(id, itemData);
@@ -76,7 +76,11 @@ export default function EditItem() {
   };
 
   if (loading) {
-    return <div className="container mt-5"><p>Loading item...</p></div>;
+    return (
+      <div className="container mt-5">
+        <p>Loading item...</p>
+      </div>
+    );
   }
 
   return (

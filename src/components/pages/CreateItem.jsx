@@ -8,22 +8,22 @@ export default function CreateItem() {
     name: "",
     description: "",
     category: "",
-    price: ""
+    price: "",
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!formData.name.trim()) {
       setError("Item name is required");
       return;
@@ -32,12 +32,12 @@ export default function CreateItem() {
     try {
       setLoading(true);
       setError(null);
-      
+
       const itemData = {
         name: formData.name,
         description: formData.description,
         category: formData.category,
-        price: formData.price ? parseFloat(formData.price) : null
+        price: formData.price ? parseFloat(formData.price) : null,
       };
 
       const id = await createItem(itemData);

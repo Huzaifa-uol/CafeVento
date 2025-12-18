@@ -18,7 +18,8 @@ function App() {
 
         <main className="flex-fill">
           <Routes>
-            <Route path="/" element={<ItemList />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/items" element={<ItemList />} />
             <Route path="/create" element={<CreateItem />} />
             <Route path="/item/:id" element={<ViewItem />} />
             <Route path="/edit/:id" element={<EditItem />} />
