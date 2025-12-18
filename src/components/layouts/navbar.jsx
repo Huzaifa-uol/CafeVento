@@ -13,6 +13,9 @@ export default function Navbar() {
             <Link className="nav-link" to="/">Home</Link>
           </li>
           <li className="nav-item">
+            <Link className="nav-link" to="/items">Items</Link>
+          </li>
+          <li className="nav-item">
             <Link className="nav-link" to="/menu">Menu</Link>
           </li>
           <li className="nav-item">
@@ -20,6 +23,9 @@ export default function Navbar() {
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/contact">Contact</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link btn btn-primary text-white ms-2" to="/create">+ Create</Link>
           </li>
         </ul>
       </div>
