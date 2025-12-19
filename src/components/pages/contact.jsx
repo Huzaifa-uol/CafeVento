@@ -40,7 +40,7 @@ export default function Contact() {
       <div className="map-container mb-5" style={{ width: "100%", maxWidth: "900px", height: "450px", borderRadius: "16px", overflow: "hidden", boxShadow: "0 0 30px rgba(0,0,0,0.6)" }}>
         <iframe
           title="Cafe Vento Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.123456789!2d67.123456!3d24.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f123456789%3A0x123456789abcdef!2sCafe%20Vento!5e0!3m2!1sen!2s!4v1699999999999!5m2!1sen!2s"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.8897221715307!2d67.04958!3d24.861589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e8f0000001%3A0x500ea6a51acb7dc7!2sKarachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1702992839500!5m2!1sen!2s"
           width="100%"
           height="100%"
           style={{ border: 0 }}
